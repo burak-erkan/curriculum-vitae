@@ -16,7 +16,7 @@ jobs:
     - name: Prepare deployment
       run: | 
         mkdir build
-        mv cp cv/index.pdf build/
+        cp cv/index.pdf build/
     - name: GH Pages Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
