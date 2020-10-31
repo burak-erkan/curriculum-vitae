@@ -1,7 +1,25 @@
-% CV Section
+\newcommand{\mysection}[1]{%
+    {
+        \sf\bf%
+        % \setlength{\fboxsep}{0cm}%already boxed
+        \noindent
+        \colorbox{lightblue}{%
+            \begin{minipage}{\linewidth}%
+                \vspace*{3pt}%Space before
+                #1
+                \vspace*{3pt}%Space after
+            \end{minipage}%
+        }
+    }
+    }
+    
+    
+    % CV Section
 \newcommand{\CvSection}[2]{
-    \section{#1} 
+    \mysection{#1}
+    \vspace{-20pt}
     #2
+    \vspace{10pt}
 }
 
 \newcommand{\CvSectionEntry}[2]{
@@ -26,6 +44,7 @@
 
 % CV Section Table
 \newenvironment{CvSectionTable} {
+    \vspace{10pt}
     \table[!htbp]
     \tabularx{\textwidth}{smb}
 }{
