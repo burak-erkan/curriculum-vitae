@@ -17,18 +17,21 @@
     % CV Section
 \newcommand{\CvSection}[2]{
     \mysection{#1}
-    \vspace{-20pt}
+    \vspace{-10pt}
     #2
-    \vspace{10pt}
+    \vspace{20pt}
 }
 
 \newcommand{\CvSectionTableEntry}[2]{
-    \makecell[l]{\textbf{#1}} & \textbf{:} & \makecell[lt]{#2} \\
+    % \makecell[l]{\textbf{#1}} & \textbf{:} & \makecell[lt]{#2} \\
+    \multicolumn{1}{l}{\textbf{#1}} & \multicolumn{1}{r}{\textbf{:}} 
+    & \makecell[lt]{#2} \\
 }
 
 \newcommand{\CvSectionTableEntryTitle}[2]{
-    % \makecell[l]{\textbf{#1}} & \phantom{:} & \makecell[lt]{#2} \\
-    \makecell[l]{\textbf{#1}} & \phantom{:} & \multicolumn{1}{r}{\textbf{#2}} \\
+    \seperator    
+    \multicolumn{2}{l}{\textbf{#1}} & \multicolumn{1}{r}{\textbf{#2}} \\
+    \seperator
 }
 
 
@@ -52,10 +55,10 @@
 
 % CV Section Table
 \newenvironment{CvSectionTable} {
-    \vspace{10pt}
     \table[!htbp]
     \tabularx{\textwidth}{smb}
-}{
+    }{
     \endtabularx
     \endtable
+    \vspace{-20pt}
 }
