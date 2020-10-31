@@ -1,20 +1,34 @@
 % CV Section
 \newcommand{\CvSection}[2]{
-    \tikzpicture
-    \node[fancytitle] {#1};
-    \endtikzpicture
-    \\
+    \section{#1} 
     #2
-    \vspace{14pt}
 }
 
 \newcommand{\CvSectionEntry}[2]{
     \makecell[l]{\textbf{#1}} & \textbf{:} & \makecell[lt]{#2} \\
 }
-\newcommand{\CvSectionEntryTitle}[2]{
-    \makecell[l]{\textbf{#1}} & \textbf{:} & \makecell[lt]{#2} \\
-}
 
 \newcommand{\seperator}{
     \noalign{\smallskip}\hline\noalign{\smallskip}
+}
+
+
+% CV
+\newenvironment{Cv}[1]{
+    \begin{center}
+        % Full name of CV owner
+        \textcolor{darkblue} {
+            \huge{\textbf{#1}}
+        }
+    \end{center}        
+}{}
+
+
+% CV Section Table
+\newenvironment{CvSectionTable} {
+    \table[!htbp]
+    \tabularx{\textwidth}{smb}
+}{
+    \endtabularx
+    \endtable
 }
