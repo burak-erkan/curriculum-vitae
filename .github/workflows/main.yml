@@ -1,0 +1,23 @@
+name: Wiki Publisher
+on:
+  push:
+      branches: [master]
+jobs:
+  wiki_build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: xu-cheng/latex-action@v2
+      with:
+        working_directory: ./cv
+        root_file: |
+          index.tex
+    - name: Prepare deployment
+      run: | 
+        mkdir build
+        mv cp/index.pdf build/
+    - name: GH Pages Deploy
+      uses: peaceiris/actions-gh-pages@v3.
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
