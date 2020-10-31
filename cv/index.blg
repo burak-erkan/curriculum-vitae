@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'index.blg'
+[72] biber:322> INFO - === Cts Eki 31, 2020, 19:24:01
+[88] Biber.pm:415> INFO - Reading 'index.bcf'
+[143] Biber.pm:940> INFO - Using all citekeys in bib section 0
+[156] Biber.pm:4256> INFO - Processing section 0
+[156] Utils.pm:75> INFO - Globbing data source 'arduino.bib'
+[157] Utils.pm:91> INFO - Globbed data source 'arduino.bib' to arduino.bib
+[170] Biber.pm:4455> INFO - Looking for bibtex format file 'arduino.bib' for section 0
+[171] bibtex.pm:1653> INFO - LaTeX decoding ...
+[177] bibtex.pm:1471> INFO - Found BibTeX data source 'arduino.bib'
+[221] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[221] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[221] Biber.pm:4084> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[221] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[223] bbl.pm:652> INFO - Writing 'index.bbl' with encoding 'UTF-8'
+[225] bbl.pm:755> INFO - Output to index.bbl
