@@ -1,0 +1,22 @@
+
+% CV
+\newenvironment{Cv}[1]{
+    \begin{center} 
+        % Full name of CV owner
+        \textcolor{darkblue} {
+            \huge{\textbf{#1}}
+        }
+    \end{center}        
+}{}
+
+
+% CV Section Table
+\newenvironment{CvSectionTable} {
+    \vspace{-2em}
+    \table[htbp]
+    \caption{Table to test captions and labels}
+    \tabularx{\textwidth}{smb}
+}{
+    \endtabularx
+    \endtable
+}

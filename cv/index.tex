@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+
+\usepackage{array}
+\usepackage{keycommand}
+\usepackage{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{lipsum}
+
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{colortbl}
+
+\usepackage{tikz}
+
+
+\input{src/variables.tex}
+\input{src/commands.tex}
+\input{src/environments.tex}
+
+\begin{document}
+
+\begin{Cv}{Mehmet Arif Emre Şen}
+  
+  \input{src/sections/01_personal-info.tex}
+  \input{src/sections/02_about-me.tex}
+  \input{src/sections/03_education.tex}
+  \input{src/sections/04_organization.tex}
+  \input{src/sections/05_programming-languages.tex}
+  \input{src/sections/06_other-skills.tex}
+  \input{src/sections/07_languages.tex}
+  \input{src/sections/08_work-experience.tex}
+  \input{src/sections/09_studies.tex}
+  \input{src/sections/10_utility-works.tex}
+  \input{src/sections/11_hobbies-and-personal-intersts.tex}
+  \input{src/sections/12_publications.tex}    
+   
+\end{Cv}
+    
+
+\end{document}
+ 

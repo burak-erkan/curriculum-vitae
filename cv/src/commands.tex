@@ -1,0 +1,20 @@
+% CV Section
+\newcommand{\CvSection}[2]{
+    \tikzpicture
+    \node[fancytitle] {#1};
+    \endtikzpicture
+    \\
+    #2
+    \vspace{14pt}
+}
+
+\newcommand{\CvSectionEntry}[2]{
+    \makecell[l]{\textbf{#1}} & \textbf{:} & \makecell[lt]{#2} \\
+}
+\newcommand{\CvSectionEntryTitle}[2]{
+    \makecell[l]{\textbf{#1}} & \textbf{:} & \makecell[lt]{#2} \\
+}
+
+\newcommand{\seperator}{
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+}
