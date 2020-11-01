@@ -1,29 +1,39 @@
-// or less ideally
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
-function App() {
+const Home = () => <div>home</div>;
+
+const Cv = () => <div>cv</div>;
+
+const App = () => {
   return (
-    <div className="App">
-      <Navbar bg="dark" variant="dark" expand="lg">
+    <Router>
+      <div className="App">
+        <Navbar bg="dark" variant="dark" expand="lg">
+          <Container>
+            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/cv" className="nav-link">CV</Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/cv" component={Cv}></Route>
+          </Switch>
         </Container>
-      </Navbar>
-      <Container>
-        <div>dsf dsf</div>
-      </Container>
-    </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
