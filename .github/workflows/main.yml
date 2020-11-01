@@ -1,24 +1,24 @@
 name: Publisher
 on:
   push:
-      branches: [main]
+    branches: [main]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build CV
-      uses: xu-cheng/latex-action@v2
-      with:
-        working_directory: ./cv
-        root_file: |
-          index.tex
-    - name: Prepare deployment
-      run: | 
-        mkdir build
-        cp cv/index.pdf build/
-    - name: GH Pages Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - uses: actions/checkout@v2
+      - name: Build CV
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ./
+          root_file: |
+            index.tex
+      - name: Prepare deployment
+        run: |
+          mkdir build
+          cp index.pdf build/
+      - name: GH Pages Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
