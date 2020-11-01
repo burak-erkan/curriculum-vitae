@@ -16,7 +16,7 @@ jobs:
       - name: Prepare deployment
         run: |
           mkdir build
-          cp index.pdf build/
+          cp index.pdf build/cv_mehmet_arif_emre_sen.pdf
       - name: GH Pages Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
