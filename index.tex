@@ -15,6 +15,10 @@
 \usepackage{colortbl}
 \usepackage{soul}
 
+
+\usepackage{titlesec}
+
+
 \usepackage[
 backend=biber,
 sorting=ynt,
@@ -25,11 +29,18 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
 
 
 \input{src/variables.tex}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+  
+
 \input{src/commands.tex}
 
 \begin{document}
 
 \begin{Cv}{Mehmet Arif Emre Şen}
+
   
   \input{src/sections/personal-info.tex}
   \input{src/sections/about-me.tex}

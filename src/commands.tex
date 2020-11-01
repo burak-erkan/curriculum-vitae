@@ -12,13 +12,12 @@
         }
     }
     }
-    
-    
+        
     % CV Section
 \newcommand{\CvSection}[2]{
-    \section{#1}
-    \vspace{-10pt}
+    \section*{#1}
     #2
+    \vspace{-10pt}
 }
 
 \newcommand{\CvSectionTableEntry}[2]{
@@ -43,19 +42,17 @@
 \newenvironment{Cv}[1]{
     \begin{center}
         % Full name of CV owner
-        \textcolor{darkblue} {
-            \huge{\textbf{#1}}
-        }
+        \huge{\textbf{#1}}
     \end{center}        
 }{}
 
 
 % CV Section Table
 \newenvironment{CvSectionTable} {
+    \vspace{-10pt}
     \table[!htbp]
     \tabularx{\textwidth}{smb}
     }{
     \endtabularx
     \endtable
-    \vspace{-20pt}
 }
