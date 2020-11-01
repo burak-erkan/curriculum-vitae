@@ -1,3 +1,6 @@
+*.bbl
+*.bcf
+*.blg
 *.aux
 *.fdb_latexmk
 *.fls
