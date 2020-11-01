@@ -15,8 +15,10 @@
 \usepackage{colortbl}
 \usepackage{soul}
 
-
 \usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
 
 
 \usepackage[
@@ -28,19 +30,24 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
 \addbibresource{src/publications/articles.bib}
 
 
+\usepackage{graphicx}
+\graphicspath{ {./src/images/} }
+\usepackage{wrapfig}
+
 \input{src/variables.tex}
-
-\titleformat{\section}
-  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-
-  
-
 \input{src/commands.tex}
 
 \begin{document}
 
+
 \begin{Cv}{Mehmet Arif Emre Şen}
 
+  
+  \begin{wrapfigure}{r}{0.2\textwidth}
+    \begin{center}
+      \includegraphics[width=3cm]{emre_portrait.jpeg}
+    \end{center}
+  \end{wrapfigure}
   
   \input{src/sections/personal-info.tex}
   \input{src/sections/about-me.tex}
