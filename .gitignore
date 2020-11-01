@@ -1,1 +1,12 @@
-node_modules
+*.bbl
+*.bcf
+*.blg
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.pdf
+*.synctex.gz
+__*
+
+.fuse*
