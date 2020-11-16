@@ -41,6 +41,8 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
 \titleformat{\subsection}
   {\normalfont\bfseries\color{darkblue}}{\thesection}{1em}{}[]
 
+  \hyphenation{thatshouldnot}
+
 
 \begin{document}
 
@@ -50,7 +52,10 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
   \huge{\textbf{Mehmet Arif Emre Şen}}
 \end{center}        
 
+\justify
+
 \begin{multicols}{2}
+
 
     % \begin{wrapfigure}{r}{0.2\textwidth}
     %   \begin{center}
@@ -67,5 +72,6 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
     \colbreak
     \input{src/sections/work-experience.tex}
     \input{src/sections/skills.tex}
+    \colbreak
     \input{src/sections/publications.tex}    
 \end{document}
