@@ -2,7 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[a4paper, total={7in, 10.6in}]{geometry}
 
 \usepackage{array}
 \usepackage{keycommand}
@@ -16,6 +16,9 @@
 \usepackage{soul}
 
 \usepackage{titlesec}
+
+\usepackage[document]{ragged2e}
+
 
 \usepackage[
 backend=biber,
@@ -52,26 +55,28 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
   \huge{\textbf{Mehmet Arif Emre Şen}}
 \end{center}        
 
-\justify
+\raggedright
+
+% \setlength{\columnsep}{0.3cm}
+
+
+\input{src/sections/personal-info.tex}
+\input{src/sections/languages.tex}
+\input{src/sections/education.tex}
+\input{src/sections/organization.tex}
+\input{src/sections/publications.tex}
+\pagebreak
 
 \begin{multicols}{2}
-
-
     % \begin{wrapfigure}{r}{0.2\textwidth}
     %   \begin{center}
     %     \includegraphics[width=3cm]{emre_portrait.jpeg}
     %   \end{center}
     % \end{wrapfigure}
     
-    \input{src/sections/personal-info.tex}
-    \input{src/sections/about-me.tex}
-    \input{src/sections/languages.tex}
-    \input{src/sections/education.tex}
-    \input{src/sections/organization.tex}
-    \input{src/sections/freelance-works.tex}
-    \colbreak
     \input{src/sections/work-experience.tex}
+    \input{src/sections/freelance-works.tex}
     \input{src/sections/skills.tex}
-    \colbreak
-    \input{src/sections/publications.tex}    
+\end{multicols}
+
 \end{document}

@@ -1,19 +1,4 @@
-\newcommand{\mysection}[1]{%
-    {
-        \sf\bf%
-        % \setlength{\fboxsep}{0cm}%already boxed
-        \noindent
-        \colorbox{lightblue}{%
-            \begin{minipage}{\linewidth}%
-                \vspace*{3pt}%Space before
-                #1
-                \vspace*{3pt}%Space after
-            \end{minipage}%
-        }
-    }
-    }
-        
-    % CV Section
+% CV Section
 \newcommand{\CvSection}[2]{
     \section*{#1}
     #2
@@ -21,8 +6,12 @@
 }
 
 \newcommand{\CvSectionEntry}[2]{
-    \subsection*{#1}
+    {
+        \textit{\color{darkblue}{\textbf{#1}}}
+        \newline
+    }
     #2
+    \vspace{0.2in}
 }
 
 
@@ -33,13 +22,3 @@
     \vfill\null
     \columnbreak
 }
-
-
-% CV
-\newenvironment{Cv}[1]{
-    \begin{center}
-        % Full name of CV owner
-        \huge{\textbf{#1}}
-    \end{center}        
-}{}
-
