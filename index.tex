@@ -39,16 +39,13 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
 \input{src/commands.tex}
 
 \titleformat{\section}
-  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+  {\normalfont\Huge\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
 
 \titleformat{\subsection}
-  {\normalfont\bfseries\color{darkblue}}{\thesection}{1em}{}[]
+  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[]
 
-  \hyphenation{thatshouldnot}
-
-
+  
 \begin{document}
-
 
 \begin{center}
   % Full name of CV owner
@@ -64,19 +61,23 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
 \input{src/sections/languages.tex}
 \input{src/sections/education.tex}
 \input{src/sections/organization.tex}
-\input{src/sections/publications.tex}
 \pagebreak
 
 \begin{multicols}{2}
-    % \begin{wrapfigure}{r}{0.2\textwidth}
+  % \begin{wrapfigure}{r}{0.2\textwidth}
     %   \begin{center}
-    %     \includegraphics[width=3cm]{emre_portrait.jpeg}
-    %   \end{center}
-    % \end{wrapfigure}
-    
-    \input{src/sections/work-experience.tex}
-    \input{src/sections/freelance-works.tex}
-    \input{src/sections/skills.tex}
-\end{multicols}
+      %     \includegraphics[width=3cm]{emre_portrait.jpeg}
+      %   \end{center}
+      % \end{wrapfigure}
+      
+      \input{src/sections/work-experience.tex}
+      \colbreak
+      \input{src/sections/freelance-works.tex}
+      \input{src/sections/skills.tex}
+    \end{multicols}
+
+\pagebreak
+\input{src/sections/publications.tex}
+
 
 \end{document}
