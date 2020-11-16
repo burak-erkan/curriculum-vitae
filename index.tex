@@ -39,44 +39,40 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
 \input{src/commands.tex}
 
 \titleformat{\section}
-  {\normalfont\Huge\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
 
 \titleformat{\subsection}
-  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[]
+  {\normalfont\bfseries\color{darkblue}}{\thesection}{1em}{}[]
 
   
 \begin{document}
 
-\begin{center}
-  % Full name of CV owner
-  \huge{\textbf{Mehmet Arif Emre Şen}}
-\end{center}        
 
 \raggedright
 
-% \setlength{\columnsep}{0.3cm}
 
-
-\input{src/sections/personal-info.tex}
-\input{src/sections/languages.tex}
-\input{src/sections/education.tex}
-\input{src/sections/organization.tex}
-\pagebreak
-
-\begin{multicols}{2}
-  % \begin{wrapfigure}{r}{0.2\textwidth}
-    %   \begin{center}
-      %     \includegraphics[width=3cm]{emre_portrait.jpeg}
-      %   \end{center}
-      % \end{wrapfigure}
-      
-      \input{src/sections/work-experience.tex}
-      \colbreak
-      \input{src/sections/freelance-works.tex}
-      \input{src/sections/skills.tex}
-    \end{multicols}
+\begin{center}
+  \huge{\textbf{Mehmet Arif Emre Şen}}
+\end{center}        
+\begin{multicols}{2} 
+  \input{src/sections/personal-info.tex}
+  \input{src/sections/languages.tex}
+  \input{src/sections/education.tex}
+  \input{src/sections/organization.tex}
+  \colbreak
+  \input{src/sections/skills.tex}
+\end{multicols}
 
 \pagebreak
+
+\begin{center}
+  % Full name of CV owner
+  \huge{\textbf{Work Experiences}}
+\end{center}      
+\input{src/sections/work-experience.tex}
+  
+\pagebreak
+
 \input{src/sections/publications.tex}
 
 
