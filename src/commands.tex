@@ -20,21 +20,23 @@
     \vspace{-10pt}
 }
 
-\newcommand{\CvSectionTableEntry}[2]{
-    % \makecell[l]{\textbf{#1}} & \textbf{:} & \makecell[lt]{#2} \\
-    \multicolumn{1}{l}{\textbf{#1}} & \multicolumn{1}{r}{\textbf{:}} 
-    & \makecell[lt]{#2} \\
+\newcommand{\CvSectionEntry}[2]{
+    \noindent\textbf{#1} \\
+    #2
 }
-
-\newcommand{\CvSectionTableEntryTitle}[2]{
-    \seperator    
-    \multicolumn{2}{l}{\textbf{#1}} & \multicolumn{1}{r}{\textbf{#2}} \\
-    \seperator
+    
+\newcommand{\CvSectionEntryTitle}[2]{
+    \subsection*{#1}
+    #2
 }
 
 
 \newcommand{\seperator}{
     \noalign{\smallskip}\hline\noalign{\smallskip}
+}
+\newcommand{\colbreak}{
+    \vfill\null
+    \columnbreak
 }
 
 
@@ -46,13 +48,3 @@
     \end{center}        
 }{}
 
-
-% CV Section Table
-\newenvironment{CvSectionTable} {
-    \vspace{-10pt}
-    \table[!htbp]
-    \tabularx{\textwidth}{smb}
-    }{
-    \endtabularx
-    \endtable
-}

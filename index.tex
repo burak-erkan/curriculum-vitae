@@ -16,10 +16,6 @@
 \usepackage{soul}
 
 \usepackage{titlesec}
-\titleformat{\section}
-  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-
-
 
 \usepackage[
 backend=biber,
@@ -29,6 +25,8 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
 ]{biblatex}
 \addbibresource{src/publications/articles.bib}
 
+\usepackage{multicol}
+
 
 \usepackage{graphicx}
 \graphicspath{ {./src/images/} }
@@ -37,32 +35,37 @@ maxbibnames=99, minbibnames=99 % <-- or some absurd number
 \input{src/variables.tex}
 \input{src/commands.tex}
 
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\normalfont\bfseries\color{darkblue}}{\thesection}{1em}{}[]
+
+
 \begin{document}
 
 
-\begin{Cv}{Mehmet Arif Emre Şen}
+\begin{center}
+  % Full name of CV owner
+  \huge{\textbf{Mehmet Arif Emre Şen}}
+\end{center}        
 
-  
-  \begin{wrapfigure}{r}{0.2\textwidth}
-    \begin{center}
-      \includegraphics[width=3cm]{emre_portrait.jpeg}
-    \end{center}
-  \end{wrapfigure}
-  
-  \input{src/sections/personal-info.tex}
-  \input{src/sections/about-me.tex}
-  \input{src/sections/languages.tex}
-  \input{src/sections/education.tex}
-  \input{src/sections/organization.tex}
-  
-  \pagebreak
-  \input{src/sections/skills.tex}
-  \pagebreak
-  \input{src/sections/work-experience.tex}
-  \pagebreak
-  
-  \input{src/sections/publications.tex}    
-\end{Cv}
+\begin{multicols}{2}
+
+    % \begin{wrapfigure}{r}{0.2\textwidth}
+    %   \begin{center}
+    %     \includegraphics[width=3cm]{emre_portrait.jpeg}
+    %   \end{center}
+    % \end{wrapfigure}
     
+    \input{src/sections/personal-info.tex}
+    \input{src/sections/about-me.tex}
+    \input{src/sections/languages.tex}
+    \input{src/sections/education.tex}
+    \input{src/sections/organization.tex}
+    \input{src/sections/freelance-works.tex}
+    \colbreak
+    \input{src/sections/work-experience.tex}
+    \input{src/sections/skills.tex}
+    \input{src/sections/publications.tex}    
 \end{document}
- 
